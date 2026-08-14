@@ -44,34 +44,74 @@ const navLinks = [
 
 const projects = [
   {
-    title: "Enterprise API Platform",
+    title: "Contract Test Framework for Connectors",
     description:
-      "Scalable REST and GraphQL services powering internal IBM tools, focused on reliability and clean architecture.",
-    tags: ["Node.js", "TypeScript", "GraphQL"],
+      "Developed an automated testing framework to validate connector behavior, API correctness, and provider compatibility. Implemented mock validation and automated execution for connector test suites, improving reliability by 30%.",
+    tags: ["JavaScript", "Shell", "HTML", "Git"],
+    impact: "30% reliability improvement",
   },
   {
-    title: "Developer Experience Portal",
+    title: "AI-Assisted Multi-Repository Dependency PR Validation",
     description:
-      "A documentation and onboarding hub that reduced new-team ramp-up time and improved cross-functional collaboration.",
-    tags: ["React", "Next.js", "Tailwind CSS"],
+      "Built an end-to-end automation system to validate and merge pull requests across multiple repositories. Integrated IBM BoB Agent to assess dependency upgrade safety and generate AI-driven merge recommendations with automated reviewer assignment.",
+    tags: ["Agentic AI", "JavaScript", "Jenkins", "Git"],
+    impact: "Reduced manual effort & accelerated PR approvals",
   },
   {
-    title: "Cloud Migration Toolkit",
+    title: "Enterprise API Integration Platform",
     description:
-      "Automation scripts and CLI tooling that streamlined containerized deployments across hybrid cloud environments.",
-    tags: ["Python", "Docker", "Kubernetes"],
+      "Designed and implemented scalable API integrations for enterprise applications including Slack, SharePoint, Milvus, and Wrike. Developed automation solutions for API schema generation, validation, and version compatibility verification.",
+    tags: ["Java", "Node.js", "REST APIs", "OpenAPI"],
+    impact: "40% reduction in manual review effort",
   },
 ];
 
 const skills = [
-  "TypeScript",
-  "React",
+  "Java",
+  "Spring Boot",
   "Node.js",
-  "Python",
-  "GraphQL",
-  "Cloud / Kubernetes",
-  "System Design",
+  "JavaScript",
+  "TypeScript",
+  "REST APIs",
+  "Docker",
+  "Jenkins",
+  "Git",
+  "OpenAPI",
+  "SQL",
+  "React",
   "CI/CD",
+  "System Design",
+];
+
+const experience = [
+  {
+    company: "IBM",
+    role: "Software Developer",
+    period: "Dec 2023 – Present",
+    location: "Kochi, India",
+    highlights: [
+      "Developed and maintained backend services and enterprise integrations using Java, Node.js, REST APIs, and IBM App Connect",
+      "Designed and implemented scalable API integrations for enterprise applications including Slack, SharePoint, Milvus, and Wrike",
+      "Developed automation solutions reducing manual review effort by 40%",
+      "Automated CI/CD workflows using Docker, Jenkins, Git, and Shell scripting",
+      "Mentored interns in connector development, providing technical guidance and code reviews",
+    ],
+  },
+];
+
+const education = [
+  {
+    school: "TKR College of Engineering and Technology",
+    degree: "B.Tech. in Computer Science and Engineering",
+    period: "Aug 2019 – Jun 2023",
+    cgpa: "8.35/10",
+  },
+];
+
+const achievements = [
+  "Recognized by IBM App Connect leadership for improving connector development efficiency and automation",
+  "Solved 250+ algorithmic problems on LeetCode, HackerRank, and GeeksforGeeks",
+  "HackerRank Certifications: Java, Problem Solving",
 ];
 
 function Index() {
@@ -142,12 +182,11 @@ function Index() {
                 Currently
               </p>
               <p className="mt-2 font-display text-2xl font-semibold tracking-tight md:text-3xl">
-                Software Developer at IBM
+                Software Developer at IBM, Kochi
               </p>
             </div>
             <p className="max-w-md text-muted-foreground">
-              Contributing to enterprise products, shipping production code, and helping
-              teams build with modern engineering practices.
+              Shipping production backends, designing scalable APIs, and automating CI/CD workflows while mentoring teams on modern engineering practices and connector development.
             </p>
           </div>
         </section>
@@ -191,7 +230,7 @@ function Index() {
           </div>
         </section>
 
-        {/* About / Skills */}
+        {/* About / Skills / Experience */}
         <section id="about" className="bg-secondary px-6 py-24 md:py-32">
           <div className="mx-auto max-w-6xl">
             <div className="grid gap-16 lg:grid-cols-2">
@@ -200,17 +239,15 @@ function Index() {
                   About
                 </p>
                 <h2 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-5xl">
-                  Engineering with clarity.
+                  Building reliable systems with modern practices.
                 </h2>
                 <p className="mt-6 text-lg leading-relaxed text-muted-foreground">
-                  I care about code that is readable, systems that are resilient, and
-                  interfaces that feel obvious. At IBM, I work on products used by real
-                  people, balancing speed with long-term maintainability.
+                  I focus on scalable backend architecture, clean code, and resilient systems. With 2.5+ years at IBM, I design REST APIs, automate CI/CD pipelines, mentor teams, and solve complex integration challenges. I care about code quality, testability, and long-term maintainability.
                 </p>
               </div>
               <div>
                 <p className="font-display text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-                  Skills & tools
+                  Core skills & tools
                 </p>
                 <div className="mt-4 flex flex-wrap gap-3">
                   {skills.map((skill) => (
@@ -224,6 +261,83 @@ function Index() {
                 </div>
               </div>
             </div>
+
+            {/* Experience Section */}
+            <div className="mt-20 border-t border-border pt-16">
+              <p className="font-display text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                Professional experience
+              </p>
+              <div className="mt-8 space-y-8">
+                {experience.map((exp) => (
+                  <div key={exp.company} className="border-l-2 border-primary pl-6">
+                    <div className="flex flex-col justify-between md:flex-row md:items-start">
+                      <div>
+                        <h3 className="font-display text-xl font-semibold text-foreground">
+                          {exp.role}
+                        </h3>
+                        <p className="mt-1 text-sm text-muted-foreground">
+                          {exp.company} • {exp.location}
+                        </p>
+                      </div>
+                      <p className="mt-2 text-sm font-medium text-muted-foreground md:mt-0">
+                        {exp.period}
+                      </p>
+                    </div>
+                    <ul className="mt-4 space-y-2">
+                      {exp.highlights.map((highlight) => (
+                        <li key={highlight} className="text-sm leading-relaxed text-muted-foreground">
+                          • {highlight}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Education Section */}
+            <div className="mt-16 border-t border-border pt-16">
+              <p className="font-display text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                Education
+              </p>
+              <div className="mt-8 space-y-6">
+                {education.map((edu) => (
+                  <div key={edu.school} className="flex flex-col justify-between md:flex-row md:items-start">
+                    <div>
+                      <h3 className="font-display font-semibold text-foreground">
+                        {edu.degree}
+                      </h3>
+                      <p className="mt-1 text-sm text-muted-foreground">
+                        {edu.school}
+                      </p>
+                    </div>
+                    <div className="mt-2 text-right md:mt-0">
+                      <p className="text-sm font-medium text-muted-foreground">
+                        {edu.period}
+                      </p>
+                      <p className="text-sm text-primary">
+                        CGPA: {edu.cgpa}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Achievements Section */}
+            <div className="mt-16 border-t border-border pt-16">
+              <p className="font-display text-sm font-semibold uppercase tracking-widest text-muted-foreground">
+                Recognition & achievements
+              </p>
+              <ul className="mt-8 space-y-4">
+                {achievements.map((achievement) => (
+                  <li key={achievement} className="flex items-start gap-3 text-muted-foreground">
+                    <span className="mt-1 text-primary">✓</span>
+                    <span className="text-base leading-relaxed">{achievement}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </section>
 
@@ -231,24 +345,23 @@ function Index() {
         <section id="contact" className="px-6 py-24 md:py-32">
           <div className="mx-auto max-w-4xl text-center">
             <p className="font-display text-sm font-semibold uppercase tracking-widest text-muted-foreground">
-              Contact
+              Connect with me
             </p>
             <h2 className="mt-4 font-display text-4xl font-bold tracking-tight md:text-6xl">
-              Let&apos;s build something great.
+              Let&apos;s collaborate and build great things.
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg text-muted-foreground">
-              I am open to new opportunities, collaborations, and conversations about
-              software engineering.
+              I&apos;m open to new opportunities, technical discussions, and collaborations on backend systems, APIs, and enterprise integrations. Reach out anytime.
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="mailto:hello@example.com"
+                href="mailto:raghuramdhigajarla@gmail.com"
                 className="inline-flex items-center justify-center rounded-md bg-primary px-8 py-4 text-base font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
               >
-                hello@example.com
+                raghuramdhigajarla@gmail.com
               </a>
               <a
-                href="https://github.com/username"
+                href="https://github.com/RaghuRam168"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-md border border-foreground/20 bg-transparent px-8 py-4 text-base font-semibold text-foreground transition-colors hover:bg-foreground/5"
@@ -256,7 +369,7 @@ function Index() {
                 GitHub
               </a>
               <a
-                href="https://linkedin.com/in/username"
+                href="https://linkedin.com/in/raghu-ram-dhigajarla"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-md border border-foreground/20 bg-transparent px-8 py-4 text-base font-semibold text-foreground transition-colors hover:bg-foreground/5"

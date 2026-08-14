@@ -77,14 +77,14 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Raghu Ram Dhigajarla — Backend Developer | IBM" },
+      { name: "description", content: "2.5+ years building scalable backend services, REST APIs, and enterprise integrations. Experienced with Java, Spring Boot, Node.js, Docker, Jenkins & CI/CD." },
+      { name: "author", content: "Raghu Ram Dhigajarla" },
+      { property: "og:title", content: "Raghu Ram Dhigajarla — Backend Developer | IBM" },
+      { property: "og:description", content: "2.5+ years building scalable backend services, REST APIs, and enterprise integrations." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:site", content: "@RaghuRam168" },
     ],
     links: [
       {
@@ -94,6 +94,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       {
         rel: "preconnect",
         href: "https://fonts.googleapis.com",
+      },
+      {
+        rel: "dns-prefetch",
+        href: "https://fonts.gstatic.com",
       },
       {
         rel: "preconnect",
