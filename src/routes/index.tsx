@@ -264,9 +264,6 @@ function Index() {
                 LinkedIn
               </a>
             </div>
-            <p className="mt-4 text-sm text-muted-foreground">
-              Replace the links above with your real email and profiles.
-            </p>
           </div>
         </section>
       </main>
