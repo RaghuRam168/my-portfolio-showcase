@@ -13,8 +13,4 @@ export default defineConfig({
     }),
     react(),
   ],
-  build: {
-    // Production optimization settings
-    minify: "esbuild",
-  },
 });
